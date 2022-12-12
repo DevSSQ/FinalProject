@@ -4,13 +4,22 @@ import {
 } from "@chakra-ui/react"
 import Nav from '../src/component/nav'
 import Footer from '../src/component/footer'
+// import HomePage from '../src/component/homepage'
+// import Cards from '../src/component/consultant'
+// import Info from '../src/component/info'
+import Register from '../src/component/register'
+// import Login from '../src/component/login'
 
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    {/* <Box textAlign="center" fontSize="xl"> */}
-      <Nav/>
-      <Footer/>
-    {/* </Box> */}
+    <Nav/>
+    <Register/>
+    {/* <Login/> */}
+    {/* <HomePage/>  */}
+     {/* <Cards/> */}
+    {/* <Info/> */} 
+     <Footer/>
   </ChakraProvider>
+
 )

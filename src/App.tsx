@@ -9,6 +9,7 @@ import {
 // import Info from '../src/component/info'
 // import Register from '../src/component/register'
 // import Login from '../src/component/login'
+import ConsultantProfile from './component/conProfile'
 
 
 export const App = () => (
@@ -20,6 +21,7 @@ export const App = () => (
      {/* <Cards/> */}
     {/* <Info/> 
      <Footer/> */}
+     <ConsultantProfile/>
   </ChakraProvider>
 
 )

@@ -18,7 +18,6 @@ function Nav() {
         <Link href={'#'}>الرئيسية</Link>
         <Image
               boxSize='180px'
-              
               src='./levelup.png'></Image>
       </HStack>
       </Flex>

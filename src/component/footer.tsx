@@ -21,10 +21,10 @@ import {
   }) => {
     return (
       <chakra.button
-      bg={'#F2DFA7'}
+      bg={'white'}
       color={'#1F5373'}
       _focus={{
-        bg: '##1F5373',
+        bg: '#F2DFA7',
       }}
         rounded={'full'}
         w={8}
@@ -50,13 +50,16 @@ import {
   export default function SmallCentered() {
     return (
         <Box
+          width= {'100%'}
+          position= {'fixed'}
+          bottom= {0}
           borderTopWidth={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.700')}
           bg={'#1F5373'}
           color={'#1F5373'}
           _focus={{
-            bg: '##1F5373',
+            bg: '#1F5373',
           }}
           >
           <Container
@@ -78,7 +81,7 @@ import {
                 <FaInstagram />
               </SocialButton>
             </Stack>
-            <Text color={'#F2DFA7'}> 2022 جميع الحقوق محفوظة لدى شورى ©</Text>
+            <Text color={'white'}> 2022 جميع الحقوق محفوظة لدى شورى ©</Text>
           </Container>
         </Box>
     );

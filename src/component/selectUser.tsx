@@ -1,4 +1,5 @@
 import { Button, VStack, Box, Flex, Text } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 function SelectUser() {
 
@@ -8,10 +9,13 @@ function SelectUser() {
     <VStack spacing='2rem' width='20rem'>
         <Text fontSize={'30'} textColor={"#1F5373"}>تسجيل مستخدم جديد</Text>
 
-    <Box boxShadow={'xl'}>  <Button textColor={"#1F5373"} bg={'#F2DFA7'} w={'400px'}> مستخدم جديد </Button> </Box>
+    <Box boxShadow={'xl'}>  <Link to = "/register">
+     <Button textColor={"#1F5373"} bg={'#F2DFA7'} w={'400px'}> مستخدم جديد </Button> 
+     </Link></Box>
 
 <Box boxShadow={'xl'}>
-            <Button textColor={"#1F5373"} bg={'#F2DFA7'} w={'400px'} > مستشار مالي </Button> </Box>
+<Link to = "/register"> <Button textColor={"#1F5373"} bg={'#F2DFA7'} w={'400px'} > مستشار مالي </Button> </Link>
+</Box>
 
             </VStack> 
             </Flex>

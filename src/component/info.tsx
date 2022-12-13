@@ -16,6 +16,7 @@ import {
   } from '@chakra-ui/react';
 
 export default function blogPostWithImage() {
+  
   return (
     <Center py={6}>
       <Box

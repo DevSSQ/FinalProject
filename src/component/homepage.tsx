@@ -128,7 +128,7 @@ export const  HomePage =() => {
         </Text>
 
         <Stack mt={8} direction={'row'} spacing={4}>
-          <Link to = "/selectuser">
+          <Link to = "/login">
           <Button
             flex={1}
             fontSize={'sm'}
@@ -180,6 +180,7 @@ export const  HomePage =() => {
            على شهادة المستشار المالي المعتمد (CFC)
         </Text>
         <Stack mt={8} direction={'row'} spacing={4}>
+        <Link to = "/login">
           <Button
             flex={1}
             fontSize={'sm'}
@@ -192,6 +193,7 @@ export const  HomePage =() => {
             }}>
             تفاصيل أكثر
           </Button>
+          </Link>
         </Stack>
       </Box>
 
@@ -232,6 +234,7 @@ export const  HomePage =() => {
            على شهادة المستشار المالي المعتمد (CFC)
         </Text>
         <Stack mt={8} direction={'row'} spacing={10}>
+        <Link to = "/login">
           <Button
             flex={1}
             fontSize={'sm'}
@@ -244,6 +247,7 @@ export const  HomePage =() => {
             }}>
             تفاصيل أكثر
           </Button>
+          </Link>
         </Stack>
       </Box>
   </Grid>

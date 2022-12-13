@@ -14,6 +14,7 @@ import SelectUser from "./component/selectUser"
 import {ConProfile} from "../src/component/ConProfile"
 import { Rating } from "./component/rating"
 import ProtectedRoute from "./component/protectedRoute"
+import {RegisterConPages} from "./component/RegisterConPages"
 
 
 export const App = () => (
@@ -25,13 +26,14 @@ export const App = () => (
         <Route path='/' element={<HomePage />}></Route>
         <Route path='/selectuser' element={<SelectUser />}></Route>
         <Route path='/login' element={<LoginPages />}></Route>
-        <Route path='/register' element={<RegisterPages />}></Route>
-        {/* <Route element={<ProtectedRoute />}> */}
+        <Route path='/Userregister' element={<RegisterPages />}></Route>
+        <Route path="/register" element={<RegisterConPages />}></Route>
+        <Route element={<ProtectedRoute />}>
         <Route path='/consultant' element={<Consultant />}></Route>
-        <Route path='/info' element={<Info />}></Route>
+        <Route path='/info/:user_id' element={<Info />}></Route>
         <Route path='/conprofile' element={<ConProfile />}></Route>
         <Route path='/rating' element={<Rating />}></Route>
-        {/* </Route> */}
+        </Route>
      </Routes>
      <Footer/> 
   </ChakraProvider>

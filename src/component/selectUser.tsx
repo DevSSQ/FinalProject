@@ -10,11 +10,11 @@ function SelectUser() {
         <Text fontSize={'30'} textColor={"#1F5373"}>تسجيل مستخدم جديد</Text>
 
     <Box boxShadow={'xl'}>  <Link to = "/register">
-     <Button textColor={"#1F5373"} bg={'#F2DFA7'} w={'400px'}> مستخدم جديد </Button> 
+     <Button textColor={"#1F5373"} bg={'#F2DFA7'} w={'400px'} value={'Investor'} > مستخدم جديد </Button> 
      </Link></Box>
 
 <Box boxShadow={'xl'}>
-<Link to = "/register"> <Button textColor={"#1F5373"} bg={'#F2DFA7'} w={'400px'} > مستشار مالي </Button> </Link>
+<Link to = "/register"> <Button textColor={"#1F5373"} bg={'#F2DFA7'} w={'400px'} value={'Consultant'}> مستشار مالي </Button> </Link>
 </Box>
 
             </VStack> 

@@ -9,7 +9,7 @@ export const  LoginPages =() =>  {
   const toast = useToast();
   const submitLogin = async () => {
     try {
-      const request = await fetch('http://localhost:5000/api/v1/auth/login', {
+      const request = await fetch('http://localhost:5000/api/v2/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

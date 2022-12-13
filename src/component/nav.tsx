@@ -1,7 +1,6 @@
 import {
   Flex,
   HStack,
-  Link,
   Image,
   Text,
   Button,
@@ -11,8 +10,7 @@ import {
   MenuItem,
   MenuDivider,
 } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate,Link } from 'react-router-dom';
 
 
 function Nav() {
@@ -62,10 +60,10 @@ function Nav() {
 
       <HStack  width='100vw' alignItems='center' justifyContent='center'>
       <Flex gap={5} borderBottom='1px' borderColor='gray.300' pr={0} >
-      <Text fontSize='1.5em' fontFamily='inherit' ><Link href={'#'}>انضم معنا</Link></Text>
-        <Text fontSize='1.5em' fontFamily='inherit'><Link href={'#'}>من نحن</Link></Text>
-        <Text fontSize='1.5em' fontFamily='inherit'><Link href={'#'}>الجلسات</Link></Text>
-       <Text fontSize='1.5em' fontFamily='inherit'> <Link href={'#'}>الرئيسية</Link></Text>
+      <Text fontSize='1.5em' fontFamily='inherit' ><Link to='/selectUser'>انضم معنا</Link></Text>
+        <Text fontSize='1.5em' fontFamily='inherit'><Link to='#'>من نحن</Link></Text>
+        <Text fontSize='1.5em' fontFamily='inherit'><Link to='/consultant'>الجلسات</Link></Text>
+       <Text fontSize='1.5em' fontFamily='inherit'> <Link to="/">الرئيسية</Link></Text>
        </Flex>
         </HStack>
         <Image

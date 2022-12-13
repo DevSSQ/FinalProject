@@ -14,7 +14,7 @@ import {
     Button
     } from '@chakra-ui/react';
   
-  export default function blogPostWithImage() {
+  export const  ConProfile =() => {
     return (
       <Center p={6}>
         <Box

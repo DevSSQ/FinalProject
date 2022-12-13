@@ -14,8 +14,12 @@ import {
   Input,
   HStack
 } from '@chakra-ui/react';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function CallToActionWithIllustration() {
+
+export const  HomePage =() => {
+  const navigate = useNavigate();
+
   return (
     <Container maxW={'5xl'}>
       <Stack
@@ -124,6 +128,7 @@ export default function CallToActionWithIllustration() {
         </Text>
 
         <Stack mt={8} direction={'row'} spacing={4}>
+          <Link to = "/login">
           <Button
             flex={1}
             fontSize={'sm'}
@@ -134,7 +139,7 @@ export default function CallToActionWithIllustration() {
               bg: '#F2DFA7',
             }}>
             تفاصيل أكثر
-          </Button>
+          </Button></Link>
         </Stack>
       </Box>
 
@@ -175,6 +180,7 @@ export default function CallToActionWithIllustration() {
            على شهادة المستشار المالي المعتمد (CFC)
         </Text>
         <Stack mt={8} direction={'row'} spacing={4}>
+        <Link to = "/login">
           <Button
             flex={1}
             fontSize={'sm'}
@@ -187,6 +193,7 @@ export default function CallToActionWithIllustration() {
             }}>
             تفاصيل أكثر
           </Button>
+          </Link>
         </Stack>
       </Box>
 
@@ -227,6 +234,7 @@ export default function CallToActionWithIllustration() {
            على شهادة المستشار المالي المعتمد (CFC)
         </Text>
         <Stack mt={8} direction={'row'} spacing={10}>
+        <Link to = "/login">
           <Button
             flex={1}
             fontSize={'sm'}
@@ -239,6 +247,7 @@ export default function CallToActionWithIllustration() {
             }}>
             تفاصيل أكثر
           </Button>
+          </Link>
         </Stack>
       </Box>
   </Grid>

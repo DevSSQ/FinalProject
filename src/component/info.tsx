@@ -64,7 +64,7 @@ export default function blogPostWithImage() {
           <Stack m={2} p={2} fontSize='1.1em' fontFamily='sans-serif' >
           <Box><Text textAlign={'right'} pr={3} >حاصل على الماجستير في العلوم المالية مستشار مالي سابق بالتخطيط الاستراتيجي في أرامكو مدرب تطوير شخصي بمعايير الـ ICI & ICF  ومهتم ببث المعرفة المالية ومعد وعي مالي في ثواني ومرشد معتمد </Text>
             </Box>  
-</Stack>
+             </Stack>
           </Stack>   
           </Flex>
         <Flex justifyContent={'space-around'}>
@@ -72,7 +72,7 @@ export default function blogPostWithImage() {
             <Text pt={2} fontSize={'md'} fontFamily='sans-serif'> السعر : ٣٥٠ ريال</Text>
             </Box>
             <Text pr={0} pl={2} pt={2}  fontFamily='sans-serif'>              <Menu>{({ isOpen }) => (
-    <>
+          <>
       <MenuButton isActive={isOpen} as={Button} rightIcon={<ChevronDownIcon />} border='1px' >
         {isOpen ? 'اختيار المدة' : 'ساعة واحدة '}
       </MenuButton>

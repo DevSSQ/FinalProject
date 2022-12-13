@@ -87,7 +87,6 @@ import {
               rounded={'full'}
               bg={'#F2DFA7'}
               color={'#1F5373'}
-           
               _focus={{
                 bg: '#F2DFA7',
               }}>

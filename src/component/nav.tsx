@@ -11,14 +11,29 @@ import {
   MenuItem,
   MenuDivider,
 } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
+
+
 
 function Nav() {
+  const navigate = useNavigate();
+  const logout = () => {
+    localStorage.removeItem('token');
+    navigate('/');
+  };
+
+  const login = () => {
+    localStorage.removeItem('token');
+    navigate('/login');
+  };
+
   return (
     <Flex alignItems='center' justifyContent='center'>
 
 <Flex alignItems='center' justifyContent='start' ml={120} mt={0}>
     <HStack>
      <Menu>
+      
       <MenuButton as={Button} bgColor={'#F2DFA7'} color={'#1F5373'}
        _focus={{
         bg: '#F2DFA7',
@@ -27,9 +42,18 @@ function Nav() {
       حسابي
      </MenuButton>
     <MenuList dir="rtl">
+      {localStorage.getItem('token')? (
+        <>
       <MenuItem>بياناتي</MenuItem>
     <MenuDivider />
-      <MenuItem>تسجيل الخروج</MenuItem>
+      <MenuItem onClick={logout} >تسجيل الخروج</MenuItem>
+      </>
+      ): (
+        <>
+          <MenuItem onClick={login} >تسجيل الدخول</MenuItem>
+        </>
+      )}
+      
   </MenuList>
 </Menu>
 </HStack>

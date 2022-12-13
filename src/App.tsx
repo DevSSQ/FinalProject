@@ -14,6 +14,8 @@ import SelectUser from "./component/selectUser"
 import ConProfile from "../src/component/conProfile"
 import { Rating } from "./component/rating"
 import ProtectedRoute from "./component/protectedRoute"
+import Payment2 from "./component/Payment2"
+
 
 
 export const App = () => (
@@ -31,7 +33,9 @@ export const App = () => (
         <Route path='/info' element={<Info />}></Route>
         <Route path='/conprofile' element={<ConProfile />}></Route>
         <Route path='/rating' element={<Rating />}></Route>
+       
         </Route>
+        <Route path='/payment' element={<Payment2/>}></Route>
      </Routes>
      <Footer/> 
   </ChakraProvider>

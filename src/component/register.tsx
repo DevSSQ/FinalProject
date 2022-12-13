@@ -17,7 +17,7 @@ const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [password2, setPassword2] = useState('');
 return (
-  <Flex justifyContent='center' alignItems='center' height='100vh'>
+  <Flex justifyContent='center' alignItems='center' height='70vh'>
     <VStack spacing='2rem' width='20rem'>
       <Heading textColor={"#1F5373"}>تسجيل مستخدم جديد </Heading>
       <h3> أنشئ حسابك هنا</h3>
@@ -34,7 +34,7 @@ return (
         <Box>
           <Input
           textAlign={'right'}
-          placeholder= "الأيميل"
+          placeholder= "البريد الالكتروني"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             type='email'
@@ -60,7 +60,7 @@ return (
         </Box>
         <Stack pt={6}>
             <Text align={'center'}>
-           لديك حساب ؟   <Link color={"#1F5373"}>اضغط هنا</Link>
+           لديك حساب ؟   <Link href='/login' color={"#1F5373"} >اضغط هنا</Link>
             </Text>
           </Stack>
 

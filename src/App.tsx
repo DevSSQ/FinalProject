@@ -26,12 +26,12 @@ export const App = () => (
         <Route path='/selectuser' element={<SelectUser />}></Route>
         <Route path='/login' element={<LoginPages />}></Route>
         <Route path='/register' element={<RegisterPages />}></Route>
-        <Route element={<ProtectedRoute />}>
+        {/* <Route element={<ProtectedRoute />}> */}
         <Route path='/consultant' element={<Consultant />}></Route>
         <Route path='/info' element={<Info />}></Route>
         <Route path='/conprofile' element={<ConProfile />}></Route>
         <Route path='/rating' element={<Rating />}></Route>
-        </Route>
+        {/* </Route> */}
      </Routes>
      <Footer/> 
   </ChakraProvider>

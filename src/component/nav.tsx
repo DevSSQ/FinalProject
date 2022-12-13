@@ -28,7 +28,6 @@ function Nav() {
      </MenuButton>
     <MenuList dir="rtl">
       <MenuItem>بياناتي</MenuItem>
-      <MenuItem>محفظتي </MenuItem>
     <MenuDivider />
       <MenuItem>تسجيل الخروج</MenuItem>
   </MenuList>

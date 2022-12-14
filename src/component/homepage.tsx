@@ -14,12 +14,8 @@ import {
   Input,
   HStack
 } from '@chakra-ui/react';
-import { Link, useNavigate } from 'react-router-dom';
-
 
 export const  HomePage =() => {
-  const navigate = useNavigate();
-
   return (
     <Container maxW={'5xl'}>
       <Stack
@@ -40,7 +36,7 @@ export const  HomePage =() => {
         </Heading>
         <Text color={'#1F5373'} fontSize ={'2xl'}>
         احصل على استشارة مالية حول طريقة للاستثمار 
-        والادخار بشكل سريع أينما كنت من خلال مستشارين ماليين 
+        والادخار بشكل سريع أينما كنت من خلال استشاريين ماليين 
         متخصصين 
         </Text>
         <Flex w={'full'}>
@@ -58,7 +54,7 @@ export const  HomePage =() => {
         textAlign={'left'} alignContent={'center'}>
         <Image boxSize='130px' src={'./amony.png'} />
         <Heading fontSize={'2xl'} fontFamily={'body'} mt={'5'}>
-          محفظتك الخاصة
+          محفظتك الخاصة 
         </Heading>
       </Box>
       <Box
@@ -101,13 +97,13 @@ export const  HomePage =() => {
         <Avatar
           size={'xl'}
           src={
-            'https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
+            './women.svg'
           }
           mb={4}
           pos={'relative'} 
         />
         <Heading fontSize={'2xl'} fontFamily={'body'}>
-          نورة الصالح
+          ماشا الدوسري
         </Heading>
         <Stack align={'center'} justify={'center'} direction={'row'} mt={3}>
           <Badge
@@ -115,7 +111,7 @@ export const  HomePage =() => {
             py={1}
             bg={useColorModeValue('gray.50', 'gray.800')}
             fontWeight={'400'}>
-            ترخيص رقم: 891472
+            ترخيص رقم: 8914788
           </Badge>
         </Stack>
         <Text
@@ -123,12 +119,10 @@ export const  HomePage =() => {
           color={useColorModeValue('gray.700', 'gray.400')}
           py={3}
           px={3}>
-          محلل استثمارات وادارة المصاريف حاصل 
-           على شهادة المستشار المالي المعتمد (CFC)
+          حاصل  على الماجستير في العلوم المالية مستشار مالي سابق بالتخطيط الاستراتيجي في أرامكو مدرب تطوير شخصي  
         </Text>
 
         <Stack mt={8} direction={'row'} spacing={4}>
-          <Link to = "/login">
           <Button
             flex={1}
             fontSize={'sm'}
@@ -139,7 +133,7 @@ export const  HomePage =() => {
               bg: '#F2DFA7',
             }}>
             تفاصيل أكثر
-          </Button></Link>
+          </Button>
         </Stack>
       </Box>
 
@@ -154,13 +148,13 @@ export const  HomePage =() => {
         <Avatar
           size={'xl'}
           src={
-            'https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
+            './man.svg'
           }
           mb={4}
           pos={'relative'}
         />
         <Heading fontSize={'2xl'} fontFamily={'body'}>
-          نورة الصالح
+          علي اليحيى 
         </Heading>
         <Stack align={'center'} justify={'center'} direction={'row'} mt={3}>
           <Badge
@@ -168,7 +162,7 @@ export const  HomePage =() => {
             py={1}
             bg={useColorModeValue('gray.50', 'gray.800')}
             fontWeight={'400'}>
-            ترخيص رقم: 891472
+            ترخيص رقم: 451472
           </Badge>
         </Stack>
         <Text
@@ -176,11 +170,10 @@ export const  HomePage =() => {
           color={useColorModeValue('gray.700', 'gray.400')}
           py={3}
           px={3}>
-          محلل استثمارات وادارة المصاريف حاصل 
-           على شهادة المستشار المالي المعتمد (CFC)
+          خبرة مصرفية ومالية لأكثر من 20 عاماً خبير في
+           التحليل والتقييم الائتماني حاصل على الماجستير علوم المالية 
         </Text>
         <Stack mt={8} direction={'row'} spacing={4}>
-        <Link to = "/login">
           <Button
             flex={1}
             fontSize={'sm'}
@@ -193,7 +186,6 @@ export const  HomePage =() => {
             }}>
             تفاصيل أكثر
           </Button>
-          </Link>
         </Stack>
       </Box>
 
@@ -208,13 +200,13 @@ export const  HomePage =() => {
         <Avatar
           size={'xl'}
           src={
-            'https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
+            './saleh.jpeg'
           }
           mb={4}
           pos={'relative'}
         />
         <Heading fontSize={'2xl'} fontFamily={'body'}>
-          نورة الصالح
+          صالح البراهيم 
         </Heading>
         <Stack align={'center'} justify={'center'} direction={'row'} mt={3}>
           <Badge
@@ -222,7 +214,7 @@ export const  HomePage =() => {
             py={1}
             bg={useColorModeValue('gray.50', 'gray.800')}
             fontWeight={'400'}>
-            ترخيص رقم: 891472
+            ترخيص رقم: 791472
           </Badge>
         </Stack>
         <Text
@@ -230,11 +222,12 @@ export const  HomePage =() => {
           color={useColorModeValue('gray.700', 'gray.400')}
           py={3}
           px={3}>
-          محلل استثمارات وادارة المصاريف حاصل 
-           على شهادة المستشار المالي المعتمد (CFC)
+          محلل استثمارات وادارة المصاريف 
+           (CFC)حاصل على شهادة المستشار المالي المعتمد 
+          مهتم ببث المعرفة الماليه
+          
         </Text>
         <Stack mt={8} direction={'row'} spacing={10}>
-        <Link to = "/login">
           <Button
             flex={1}
             fontSize={'sm'}
@@ -247,7 +240,6 @@ export const  HomePage =() => {
             }}>
             تفاصيل أكثر
           </Button>
-          </Link>
         </Stack>
       </Box>
   </Grid>
@@ -255,7 +247,6 @@ export const  HomePage =() => {
   <br/>
   <br/>
   <br/>
-
 
   <Heading
       fontWeight={600}

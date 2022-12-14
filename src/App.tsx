@@ -2,20 +2,20 @@ import {
   ChakraProvider,
   theme,
 } from "@chakra-ui/react"
-import Nav from '../src/component/nav'
-import Footer from '../src/component/footer'
-import {HomePage} from '../src/component/homepage'
-import {Consultant} from '../src/component/consultant'
-import Info from '../src/component/info'
+import Nav from './component/Nav'
+import Footer from './component/Footer'
+import {HomePage} from './component/HomePage'
+import {Consultant} from './component/Consultant'
+import Info from './component/Info'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import RegisterPages from '../src/component/register'
-import LoginPages from '../src/component/login'
-import SelectUser from "./component/selectUser"
+import RegisterPages from './component/Register'
+import LoginPages from './component/Login'
+import SelectUser from "./component/SelectUser"
 import {ConProfile} from "../src/component/ConProfile"
-import { Rating } from "./component/rating"
+import { Rating } from "./component/Rating"
 import ProtectedRoute from "./component/protectedRoute"
 import Payment2 from "./component/Payment2"
-import {RegisterConPages} from "./component/RegisterConPages"
+import {RegisterConPages} from "./component/ConRegister"
 
 
 
@@ -35,7 +35,6 @@ export const App = () => (
         <Route path='/info/:user_id' element={<Info />}></Route>
         <Route path='/conprofile' element={<ConProfile />}></Route>
         <Route path='/rating' element={<Rating />}></Route>
-       
         </Route>
         <Route path='/payment' element={<Payment2/>}></Route>
      </Routes>

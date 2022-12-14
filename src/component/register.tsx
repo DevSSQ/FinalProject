@@ -37,7 +37,7 @@ const submitRegister = async () => {
       return;
     }
     
-    const request = await fetch('http://localhost:5000/api/v2/auth/Userregister', {
+    const request = await fetch('/api/v1/shoraa/Userregister', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const submitRegister = async () => {
 
 return (
   <Flex justifyContent='center' alignItems='center' height='70vh'>
-    <VStack spacing='2rem' width='20rem'>
+    <VStack spacing='1rem' width='20rem'>
       <Heading textColor={"#1F5373"}>تسجيل جديد  </Heading>
       <h3> أنشئ حسابك هنا</h3>
       <VStack align='left' spacing='1rem' width='100%'>
@@ -92,7 +92,7 @@ return (
         <Box>
           <Input
           textAlign={'right'}
-          placeholder= "البريد الالكتروني"
+          placeholder= "البريد الألكتروني"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             type='email'
@@ -123,7 +123,7 @@ return (
                       value={role}
                       type='text' /></Box>
         </Box>
-        <Stack pt={6}>
+        <Stack pt={1}>
             <Text align={'center'}>
            لديك حساب ؟   <Link color={"#1F5373"} to ="/login">اضغط هنا</Link>
             </Text>

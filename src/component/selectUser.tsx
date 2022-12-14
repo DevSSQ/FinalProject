@@ -9,7 +9,7 @@ function SelectUser() {
     <VStack spacing='2rem' width='20rem'>
         <Text fontSize={'30'} textColor={"#1F5373"}>تسجيل مستخدم جديد</Text>
 
-    <Box boxShadow={'xl'}>  <Link to = "/register">
+    <Box boxShadow={'xl'}>  <Link to = "/Userregister">
      <Button textColor={"#1F5373"} bg={'#F2DFA7'} w={'400px'} value={'Investor'} > مستخدم جديد </Button> 
      </Link></Box>
 

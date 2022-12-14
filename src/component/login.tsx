@@ -1,7 +1,6 @@
-
-import { Heading,Flex,VStack,Box,Input,Button, useToast, Stack,Text } from '@chakra-ui/react';
+import { Heading,Flex,VStack,Box,Input,Button, useToast } from '@chakra-ui/react';
 import { useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const  LoginPages =() =>  {
     const [email, setEmail] = useState('');
@@ -10,7 +9,7 @@ export const  LoginPages =() =>  {
   const toast = useToast();
   const submitLogin = async () => {
     try {
-      const request = await fetch('http://localhost:5000/api/v2/auth/login', {
+      const request = await fetch('/api/v1/shoraa/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,6 +44,7 @@ export const  LoginPages =() =>  {
     }
   };
 
+  
   return (
     <Flex justifyContent='center' alignItems='center' height='60vh'>
     <VStack spacing='2rem' width='20rem'>
@@ -53,7 +53,7 @@ export const  LoginPages =() =>  {
       <Box>
             <Input
             textAlign={'right'}
-            placeholder= "البريد الالكتروني"
+            placeholder= "الأيميل"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               type='email'
@@ -67,14 +67,10 @@ export const  LoginPages =() =>  {
               value={password}
               type='password'
             />
+            <Flex justifyContent={'end'} px={'2'}>
+            <Link color={"#1F5373"} to ="/selectuser"> اضغط هنا </Link>   ليس لديك حساب ؟ 
+            </Flex>
           </Box>
-          <Stack pt={6}>
-            <Text align={'center'}>
-           ليس لديك حساب ؟  <Link href='/register' color={"#1F5373"} >اضغط هنا</Link>
-            </Text>
-          </Stack>
-
-
           <Button textColor={"#1F5373"} bg={'#F2DFA7'}
           onClick={submitLogin} rounded={'full'}> دخول </Button>
           </VStack>

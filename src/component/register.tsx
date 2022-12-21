@@ -18,7 +18,7 @@ const [username, setUsername] = useState('');
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [password2, setPassword2] = useState('');
-const [role, setRole] = useState('');
+const [role, setRole] = useState('Investor');
 
 const toast = useToast();
 const navigate = useNavigate();
@@ -65,6 +65,7 @@ const submitRegister = async () => {
     });
     navigate('/login');
   } catch (error) {
+    console.log(error)
     toast({
       title: '  حدث خطأ ',
       status: 'error',
@@ -92,7 +93,7 @@ return (
         <Box>
           <Input
           textAlign={'right'}
-          placeholder= "البريد الألكتروني"
+          placeholder= "البريد الالكتروني"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             type='email'
@@ -115,13 +116,7 @@ return (
             value={password2}
             type='password'
           />
-          <Box>
-          <Input  mt={3}
-                    textAlign={'right'}
-                    placeholder='Investor ' 
-                      onChange={(e) => setRole(e.target.value)}
-                      value={role}
-                      type='text' /></Box>
+ 
         </Box>
         <Stack pt={1}>
             <Text align={'center'}>

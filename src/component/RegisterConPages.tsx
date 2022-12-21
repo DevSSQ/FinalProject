@@ -12,7 +12,7 @@ import {
   Checkbox,
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 // import RegisterAdviser from './conRegister';
 
 export const RegisterConPages = () => {
@@ -20,7 +20,7 @@ const [username, setUsername] = useState('');
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [password2, setPassword2] = useState('');
-const [role, setRole] = useState('');
+const [role, setRole] = useState('Consultant');
 const [filed, setField] = useState('');
 const [AboutMe, setAboutMe] = useState('');
 const [certificate, setCertificate] = useState('');
@@ -43,7 +43,7 @@ const submitRegisterCon = async () => {
       return;
     }
     
-    const request = await fetch('http://localhost:5000/api/v2/auth/register', {
+    const request = await fetch('/api/v1/shoraa/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ return (
         <Box>
           <Input
           textAlign={'right'}
-          placeholder= "البريد الألكتروني"
+          placeholder= "البريد الالكتروني"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             type='email'
@@ -159,13 +159,7 @@ return (
               height='100px'
             />
           </Box>
-          <Box>
-          <Input mt={2}
-                    textAlign={'right'}
-                    placeholder='Consultant' 
-                      onChange={(e) => setRole(e.target.value)}
-                      value={role}
-                      type='text' /></Box>
+         
             <Stack pt={6}>
                 <Text alignItems={'right'} ml={'200'}> سياسة الانضمام
                
@@ -173,11 +167,11 @@ return (
                 </Text>
               </Stack>
   
-            {/* <Link to ="/login"> */}
+            <Link to ="/conprofile">
             <Button textColor={"#1F5373"} bg={'#F2DFA7'}
             onClick={submitRegisterCon}
              rounded={'full'}>تسجيل </Button>
-            {/* </Link> */}
+            </Link>
       </VStack>
       </VStack>
       </Flex>

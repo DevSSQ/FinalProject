@@ -19,7 +19,7 @@ const [username, setUsername] = useState('');
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [password2, setPassword2] = useState('');
-const [role, setRole] = useState('');
+const [role, setRole] = useState('Consultant');
 const [filed, setField] = useState('');
 const [AboutMe, setAboutMe] = useState('');
 const [certificate, setCertificate] = useState('');
@@ -88,7 +88,7 @@ const submitRegisterCon = async () => {
 };
 
 return (
-  <Flex justifyContent='center' alignItems='center' height='120vh'>
+  <Flex justifyContent='center' alignItems='center' height='80vh'>
     <VStack spacing='1rem' width='20rem'>
       <Heading textColor={"#1F5373"}>تسجيل مستشار جديد  </Heading>
       <h3> أنشئ حسابك هنا</h3>
@@ -166,13 +166,13 @@ return (
               height='100px'
             />
           </Box>
-          <Box>
-          <Input mt={1}
+          {/* <Box> */}
+          {/* <Input mt={1}
                     textAlign={'right'}
                     placeholder='Consultant' 
                       onChange={(e) => setRole(e.target.value)}
                       value={role}
-                      type='text' /></Box>
+                      type='text' /></Box> */}
             <Stack pt={1}>
                 <Text alignItems={'right'} ml={'200'}> سياسة الانضمام
                 <Checkbox required alignItems={'right'} ml={'3'}> </Checkbox>

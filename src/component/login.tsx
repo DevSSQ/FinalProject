@@ -53,7 +53,7 @@ export const  LoginPages =() =>  {
       <Box>
             <Input
             textAlign={'right'}
-            placeholder= "الأيميل"
+            placeholder= "البريد الالكتروني"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               type='email'

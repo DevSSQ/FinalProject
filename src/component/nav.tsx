@@ -60,10 +60,10 @@ function Nav() {
 
       <HStack  width='100vw' alignItems='center' justifyContent='center'>
       <Flex gap={5} borderBottom='1px' borderColor='gray.300' pr={0} >
-      <Text fontSize='1.5em' fontFamily='inherit' ><Link to='/selectUser'>انضم معنا</Link></Text>
-        <Text fontSize='1.5em' fontFamily='inherit'><Link to='#'>من نحن</Link></Text>
-        <Text fontSize='1.5em' fontFamily='inherit'><Link to='/consultant'>الجلسات</Link></Text>
-       <Text fontSize='1.5em' fontFamily='inherit'> <Link to="/">الرئيسية</Link></Text>
+      <Text color={'#1F5373'}fontSize='1.5em' fontFamily='inherit' ><Link to='/selectUser'>انضم معنا</Link></Text>
+        <Text color={'#1F5373'}fontSize='1.5em' fontFamily='inherit'><Link to='/AboutUs'>من نحن</Link></Text>
+        <Text color={'#1F5373'}fontSize='1.5em' fontFamily='inherit'><Link to='/consultant'>المستشارون</Link></Text>
+       <Text color={'#1F5373'}fontSize='1.5em' fontFamily='inherit'> <Link to="/">الرئيسية</Link></Text>
        </Flex>
         </HStack>
         <Image

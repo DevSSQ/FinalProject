@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import {
     PayPalScriptProvider,
     PayPalButtons,
@@ -7,8 +7,53 @@ import {
 import {
     Center,
     Box,
-    Heading
+    Heading,
+    Stack,
+    VisuallyHidden,
+    chakra,
+    useColorModeValue,
+    Button,
+    Flex,
+    Link
 } from '@chakra-ui/react';
+import { FaWhatsapp } from 'react-icons/fa';
+
+const SocialButton = ({
+    children,
+    label,
+    href,
+  }: {
+    children: ReactNode;
+    label: string;
+    href: string;
+  }) => {
+    return (
+      <chakra.button
+      bg={'white'}
+      color={'#1F5373'}
+      _focus={{
+        bg: '#F2DFA7',
+      }}
+        rounded={'full'}
+        w={8}
+        h={8}
+        cursor={'pointer'}
+        as={'a'}
+        href={href}
+        mb={0}
+        pb={0}
+        display={'inline-flex'}
+        alignItems={'center'}
+        justifyContent={'center'}
+        transition={'background 0.3s ease'}
+        _hover={{
+          bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+        }}>
+        <VisuallyHidden>{label}</VisuallyHidden>
+        {children}
+      </chakra.button>
+    );
+  };
 
 // This values are the props in the UI
 const amount = "2";
@@ -29,7 +74,7 @@ const ButtonWrapper = ({ currency, showSpinner }:any) => {
                 currency: currency,
             },
         });
-    }, [currency, showSpinner]);
+    }, [ currency, showSpinner ]);
 
 
     return (<>
@@ -97,7 +142,6 @@ const Payment2 =()=> {
              350 SAR
             </Heading>
 
-
           <div style={{ maxWidth: "750px", minHeight: "200px" }}>
             <PayPalScriptProvider
                 options={{
@@ -112,6 +156,29 @@ const Payment2 =()=> {
                 />
 			</PayPalScriptProvider>
 		  </div>
+
+        <Flex justifyContent='center' mt={2} p={2}>
+        <Link href='https://wa.me/0500423434'>
+
+                <Button fontSize={'lg'} fontFamily='sans-serif'     
+                bg={'#F2B138'}
+              color={'#1F5373'}
+              _hover={{
+                bg: '#1F5373',
+                color: '#F2DFA7'
+              }}
+              rounded={'full'}
+              > بدء المحادثة </Button>
+              </Link>
+              </Flex>
+{/* 
+         <Stack align={'center'} justify={'center'} direction={'row'} mt={3}>
+          <SocialButton label={'Whatsapp'} href={'https://wa.me/0500423434'}>
+                <FaWhatsapp fontSize="500px">
+                </FaWhatsapp>
+              </SocialButton>
+          </Stack> */}
+
         </Box>
     </Center>
 	);
